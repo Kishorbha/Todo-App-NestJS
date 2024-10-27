@@ -1,0 +1,28 @@
+post:
+  operationId: login
+  summary: Login
+  description: >-
+    To login user. This endpoint is required to get the access token for accessing resources. [Learn more to refresh token](#)
+  tags:
+    - Authentication
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../dto/email-password.dto.yml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../responses/token.response.yml
+    '401':
+      $ref: ../../../shared/responses/unauthorized.yml
+  # x-codeSamples:
+  #   - $ref: 'examples/curl/endpoints_list.yml'
+  #   - $ref: 'examples/go/endpoints_list.yml'
+  #   - $ref: 'examples/ruby/endpoints_list.yml'
+  #   - $ref: 'examples/python/endpoints_list.yml'
+  security: []

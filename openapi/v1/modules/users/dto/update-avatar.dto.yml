@@ -1,0 +1,15 @@
+type: object
+properties:
+  original:
+    type: string
+    format: string
+    example: 5e54c887-6b89-41c2-a5d1-be54bb7ddafa.png
+    description: File name received while generating presigned url.
+  200:
+    type: string
+    format: string
+    example: 5e54c887-6b89-41c2-a5d1-be54bb7ddafb.png
+    description: Compressed form of original file with the size of 200x200 pixels. Currently will have to do on the client side.
+required:
+  - original
+  - '200'

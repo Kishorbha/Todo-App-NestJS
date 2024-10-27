@@ -1,0 +1,24 @@
+get:
+  operationId: getMe
+  summary: Get me (logged in)
+  description: >-
+    To get the currently logged in user data.
+  tags:
+    - Users
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../responses/user.response.yml'
+    '400':
+      $ref: '../../../shared/responses/unauthorized.yml'
+  # x-codeSamples:
+  #   - $ref: 'examples/curl/endpoints_list.yml'
+  #   - $ref: 'examples/go/endpoints_list.yml'
+  #   - $ref: 'examples/ruby/endpoints_list.yml'
+  #   - $ref: 'examples/python/endpoints_list.yml'
+  security:
+    - bearer_auth:
+        - 'auth:get'

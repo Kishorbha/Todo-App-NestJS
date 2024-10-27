@@ -1,0 +1,5 @@
+type: string
+format: mongo-objectid
+pattern: '^[0-9a-fA-F]{24}$'
+uniqueItems: true
+example: 507f1f77bcf86cd799439011

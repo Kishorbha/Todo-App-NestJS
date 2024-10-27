@@ -1,0 +1,11 @@
+type: object
+
+properties:
+  createdAt:
+    type: number
+    example: 1715793434855
+    description: Date in millisecond
+  updatedAt:
+    type: number
+    example: 1715793434855
+    description: Date in millisecond

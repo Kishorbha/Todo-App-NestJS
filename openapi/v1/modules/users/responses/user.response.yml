@@ -1,0 +1,24 @@
+allOf:
+  - type: object
+    properties:
+      id:
+        $ref: '../../../shared/object-id.yml'
+      fullName:
+        type: string
+        example: 'John watson'
+      email:
+        type: string
+        example: 'john@gmail.com'
+        uniqueItems: true
+      createdAt:
+        type: number
+        example: 1714595395449
+      updatedAt:
+        type: number
+        example: 1714595411370
+
+required:
+  - id
+  - email
+  - createdAt
+  - updatedAt

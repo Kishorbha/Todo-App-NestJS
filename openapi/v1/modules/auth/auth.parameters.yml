@@ -1,0 +1,8 @@
+resetToken:
+  in: query
+  name: resetToken
+  required: true
+  description: A token required to reset password.
+  schema:
+    type: string
+    example: '8943943232dee3d664bc6b605339dc24ff9376069638bc09a4110ddeb8c672a6'

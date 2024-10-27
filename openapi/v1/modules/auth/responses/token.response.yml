@@ -1,0 +1,16 @@
+type: object
+properties:
+  accessToken:
+    type: string
+    example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTcxN2ZjM2VjNGY5ZWVhN2IwNTBkMTMiLCJlbWFpbCI6Imtpc2hvcmJoYW5kYXJpNjA4QGdtYWlsLmNvbSIsImlhdCI6MTcwMTkzNzEyMCwiZXhwIjoxNzAxOTQwNzIwfQ.qDscgauyJQz5L_8m6V67CJvORFWBAPL-jQcC5u-a9CM'
+  accessTokenExpiry:
+    type: string
+    example: '2023-12-07T09:18:40.322Z'
+  refreshToken:
+    type: string
+    example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTcxN2ZjM2VjNGY5ZWVhN2IwNTBkMTMiLCJlbWFpbCI6Imtpc2hvcmJoYW5kYXJpNjA4QGdtYWlsLmNvbSIsImlhdCI6MTcwMTkzNzEyMCwiZXhwIjoxNzAyMDIzNTIwfQ.Vsfe2ZanYWz6sVCPsBGm_GxJLoEGS_UWXl7GtBXZqkY'
+  refreshTokenExpiry:
+    type: string
+    example: '2023-12-08T08:18:40.322Z'
+  user:
+    $ref: ../../users/responses/user.response.yml

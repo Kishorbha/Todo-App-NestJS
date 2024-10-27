@@ -1,0 +1,18 @@
+type: object
+
+properties:
+  page:
+    type: integer
+    format: integer
+    example: 1
+    description: Page number of the current response.
+  limit:
+    type: integer
+    format: integer
+    example: 10
+    description: Per page limit.
+  total:
+    type: integer
+    format: integer
+    example: 100
+    description: Total size count of the requested resource.

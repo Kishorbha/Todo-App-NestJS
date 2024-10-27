@@ -1,0 +1,36 @@
+type: object
+properties:
+  displayName:
+    type: string
+    format: full name
+    example: John watson
+    description: User's full name for their profile.
+  email:
+    type: string
+    format: email
+    example: john@gmail.com
+    description: A valid email address.
+  isEmailVerified:
+    type: boolean
+    format: boolean
+    example: true
+    description: Tells if a user email is valid.
+  role:
+    type: string
+    format: string
+    enum:
+      - ADMIN
+      - USER
+    default: USER
+    example: USER
+    description: Tells a user role.
+  loginType:
+    type: string
+    format: string
+    enum:
+      - FACEBOOK
+      - INSTAGRAM
+      - GOOGLE
+      - EMAIL_PASSWORD
+    example: EMAIL_PASSWORD
+    description: Tells the login method used by the user.

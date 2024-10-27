@@ -1,0 +1,15 @@
+############# auth endpoints ###############
+
+/auth/register:
+  $ref: modules/auth/controllers/auth_register.yml
+/auth/login:
+  $ref: modules/auth/controllers/auth_login.yml
+/auth/logout:
+  $ref: modules/auth/controllers/auth_logout.yml
+/auth/refresh:
+  $ref: modules/auth/controllers/auth_refresh.yml
+
+############## users endpoint ###################
+
+/users/me:
+  $ref: modules/users/controllers/users_me.yml

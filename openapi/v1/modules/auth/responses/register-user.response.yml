@@ -1,0 +1,4 @@
+properties:
+  message:
+    type: string
+    example: 'Success'

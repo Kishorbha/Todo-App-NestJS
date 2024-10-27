@@ -1,0 +1,29 @@
+type: object
+properties:
+  displayName:
+    type: string
+    format: string
+    example: John watson
+    description: User's full name
+  preferredUnits:
+    type: object
+    properties:
+      volume:
+        type: string
+        enum:
+          - GALLON
+          - LITER
+      length:
+        type: string
+        enum:
+          - INCH
+          - CENTIMETER
+      temperature:
+        type: string
+        enum:
+          - CELSIUS
+          - FAHRENHEIT
+    required:
+      - volume
+      - length
+      - temperature

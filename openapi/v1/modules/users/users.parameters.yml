@@ -1,0 +1,38 @@
+email:
+  in: query
+  name: email
+  description: Email of the user.
+  schema:
+    type: string
+  example: john@gmail.com
+
+isEmailVerified:
+  in: query
+  name: isEmailVerified
+  description: Whether email is verified.
+  schema:
+    type: string
+    default: false
+  example: true
+
+displayName:
+  in: query
+  name: displayName
+  description: full name of the user.
+  schema:
+    type: string
+  example: John watson
+
+userId:
+  in: path
+  name: userId
+  schema:
+    $ref: '../../shared/object-id.yml'
+
+relation:
+  in: query
+  name: relation
+  description: relation with user eg FOLLOWER, FOLLOWING.
+  schema:
+    type: string
+  example: FOLLOWER

@@ -1,0 +1,86 @@
+limit:
+  in: query
+  name: limit
+  required: false
+  description: Number of items returned per page
+  schema:
+    type: integer
+    minimum: 1
+    maximum: 200
+    default: 10
+  example: 10
+
+page:
+  in: query
+  name: page
+  required: false
+  description: Which 'page' of paginated results to return.
+  schema:
+    type: integer
+    minimum: 1
+    default: 1
+  example: 1
+
+sortBy:
+  in: query
+  name: sortBy
+  required: false
+  description: Results will be sorted by the selected field.
+  schema:
+    type: string
+    default: id
+  example: createdAt
+
+sortOrder:
+  in: query
+  name: sortOrder
+  required: false
+  description: The order you want response to be sorted on.
+  schema:
+    type: string
+    enum:
+      - asc
+      - desc
+    default: asc
+  example: desc
+
+includeFields:
+  in: query
+  name: includeFields
+  required: false
+  description: |
+    This fields gives kind of graphql functionality to get the specific fields we want.Use `()` parenthesis to specify nested fields for arrays or objects.
+
+    >Note: Use `_id` to get id field
+  schema:
+    type: string
+    example: name,medias,species(_id,name,compatibleSpecies(name,medias)),color
+
+excludeFields:
+  in: query
+  name: excludeFields
+  required: false
+  description: The `excludeFields` is same as `includeFields` but as opposite functionality
+  schema:
+    type: string
+    example: name,medias,species(_id,name,compatibleSpecies(name,medias)),color
+
+ContentType:
+  in: query
+  required: true
+  name: ContentType
+  description: MimeType of the media file.
+  schema:
+    type: string
+    format: mimetype
+    example: image/png
+
+ContentLength:
+  name: ContentLength
+  in: query
+  required: true
+  description: Size of the file in bytes.
+  schema:
+    type: number
+    format: bytes
+    example: 104617

@@ -1,0 +1,15 @@
+description: Unauthorized
+
+content:
+  application/json:
+    schema:
+      properties:
+        statusCode:
+          type: number
+          example: 401
+        reason:
+          type: string
+          example: UnauthorizedException
+        message:
+          type: string
+          example: Unauthorized

@@ -1,0 +1,18 @@
+type: object
+properties:
+  platform:
+    type: string
+    enum:
+      - APP_STORE
+      - PLAY_STORE
+    example: APP_STORE
+  appStoreSubReceipt:
+    type: string
+    example: MII************************************
+    description: required for `APP_STORE`
+  playStorePurchaseToken:
+    type: string
+    example: acbdilifphahhggpbhlgapnn.***************
+    description: required for `PLAY_STORE`
+required:
+  - platform

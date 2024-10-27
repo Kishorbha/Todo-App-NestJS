@@ -1,0 +1,26 @@
+get:
+  operationId: getAccessToken
+  summary: Refresh access token
+  description: >-
+    To refresh access token when expired. This endpoint allows user to use the app without having to login again when access token expired.
+
+    > 💡 Refresh token as `Bearer token` is required in Authorization header for other devices. For browsers, refresh token will be passed in cookie.
+  tags:
+    - Authentication
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../responses/token.response.yml
+    '401':
+      $ref: ../../../shared/responses/unauthorized.yml
+  # x-codeSamples:
+  #   - $ref: 'examples/curl/endpoints_list.yml'
+  #   - $ref: 'examples/go/endpoints_list.yml'
+  #   - $ref: 'examples/ruby/endpoints_list.yml'
+  #   - $ref: 'examples/python/endpoints_list.yml'
+  security:
+    - bearer_auth:
+        - 'auth:get'
